@@ -5,7 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
-
+import config from '../config';
 const categories = ['WORLD', 'NATION', 'BUSINESS', 'TECHNOLOGY', 'ENTERTAINMENT', 'SPORTS', 'SCIENCE', 'HEALTH'];
 
 function Navbar({ darkMode, setDarkMode, setNews, setError, setLoading }) {
@@ -15,7 +15,7 @@ function Navbar({ darkMode, setDarkMode, setNews, setError, setLoading }) {
         e.preventDefault();
         setLoading(true); // Start loading
         try {
-            const response = await axios.get('http://localhost:8080/api/news', {
+            const response = await axios.get(`${config.news_api}/api/news`, {
                 params: { topic: 'search', query, quantity: 5 },
             });
             setNews(response.data);
@@ -29,7 +29,7 @@ function Navbar({ darkMode, setDarkMode, setNews, setError, setLoading }) {
     const handleCategoryClick = async (category) => {
         setLoading(true); // Start loading
         try {
-            const response = await axios.get('http://localhost:8080/api/news', {
+            const response = await axios.get(`${config.news_api}/api/news`, {
                 params: { topic: category, quantity: 5 },
             });
             setNews(response.data);

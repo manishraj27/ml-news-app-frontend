@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Loader from './components/loader/Loader';
 import axios from 'axios';
+import config from './config';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,7 +17,7 @@ function App() {
     const fetchTrendingNews = async () => {
       setLoading(true); // Start loading
       try {
-        const response = await axios.get('http://localhost:8080/api/news', {
+        const response = await axios.get(`${config.news_api}/api/news`, {
           params: { topic: 'top', quantity: quantity },
         });
         setNews(response.data);
