@@ -44,7 +44,7 @@ function Navbar({ darkMode, setDarkMode, setNews, setError, setLoading }) {
         <div>
             <div className="flex justify-between items-center px-4 py-2 bg-primary-dark">
                 <div className="flex items-center space-x-2">
-                    <span className="text-white font-bold text-3xl font-cursive">One Touch News Summarizer</span>
+                    <span className="text-white font-bold text-3xl font-cursive">OneTouch News</span>
                 </div>
                 <div className="flex items-center space-x-4">
                     <a href="https://manishraj.me/" className="text-white"><FaGlobeAsia style={{ fontSize: '24px' }} /></a>

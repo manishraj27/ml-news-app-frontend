@@ -8,7 +8,7 @@ function Footer() {
   };
 
   return (
-    <footer className="mt-14 flex items-end justify-between px-5 py-4 text-body-4 sm:flex md:text-body-3" style={{ backgroundColor: '#1D4ED8' }}>
+    <footer className="mt-14 flex items-end justify-between px-5 py-4 text-body-4 sm:flex md:text-body-3" style={{ backgroundColor: '#010107' }}>
       <div className="flex flex-col justify-between md:w-[62.5vw] md:flex-row lg:w-[57.5vw]">
         <div className="flex space-x-1">
           <span className='text-neutral-light'>&copy;</span>
